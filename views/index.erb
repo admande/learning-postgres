@@ -1,0 +1,11 @@
+<ul>
+  <% @tasks.each do |task| %>
+    <li><a href="/tasks/<%= task["name"] %>"><%= task["name"] %></a></li>
+  <% end %>
+</ul>
+
+<form action="/tasks" method="post">
+  <label for="task_name">task</label>
+  <input type="text" name="task_name" id="task"></input>
+  <input type="submit" value="Add">
+</form>
